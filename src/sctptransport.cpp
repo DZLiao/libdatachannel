@@ -185,7 +185,7 @@ SctpTransport::SctpTransport(std::shared_ptr<Transport> lower, uint16_t port,
 	// The default send and receive window size of usrsctp is 256KiB, which is too small for
 	// realistic RTTs, therefore we increase it to 1MiB for better performance.
 	// See https://bugzilla.mozilla.org/show_bug.cgi?id=1051685
-	int bufferSize = 1024 * 1024;
+	int bufferSize = 3 * 1024 * 1024;
 	if (usrsctp_setsockopt(mSock, SOL_SOCKET, SO_RCVBUF, &bufferSize, sizeof(bufferSize)))
 		throw std::runtime_error("Could not set SCTP recv buffer size, errno=" +
 		                         std::to_string(errno));

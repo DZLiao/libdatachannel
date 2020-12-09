@@ -69,8 +69,8 @@ const size_t MAX_NUMERICNODE_LEN = 48; // Max IPv6 string representation length
 const size_t MAX_NUMERICSERV_LEN = 6;  // Max port string representation length
 
 const uint16_t DEFAULT_SCTP_PORT = 5000;          // SCTP port to use by default
-const size_t DEFAULT_MAX_MESSAGE_SIZE = 65536;    // Remote max message size if not specified in SDP
-const size_t LOCAL_MAX_MESSAGE_SIZE = 256 * 1024; // Local max message size
+const size_t DEFAULT_MAX_MESSAGE_SIZE = 2 * 1024 * 1024;    // Remote max message size if not specified in SDP
+const size_t LOCAL_MAX_MESSAGE_SIZE = 2 * 1024 * 1024; // Local max message size
 
 const size_t RECV_QUEUE_LIMIT = 1024 * 1024; // Max per-channel queue size
 
